@@ -18,20 +18,22 @@ This code challenge require us to solve the above challenges respectively using 
 Let's Get Started.
 
 1. WRITE A FUNCTION THAT ACCEPTS A STRING AS INPUT AND SWAPS THE CASE OF EACH CHARACTER.
+
 To solve this;
+
 We'll  write a 'swapCase' function that changes the case of each character and pass str as a parameter(this parameter indicates that our function will only accept strings). 
 
         function swapCase(str){}
 we'll then use 'str.split('')' to convert the string into an array of characters and, then use the 'map()' array method to iterate over the characters and swap cases based on whether they are in uppercase or lowercase.  Within the map() we will incoperate 'if... else' , to check if the conditions are true or false.
-    return str.split('').map((line) =>{
-            if (line === line.toUpperCase()){
-                return line.toLowerCase();
-            }
-            else{
-                return line.toUpperCase();
-            }
-    
-        }).join(''); 
+            return str.split('').map((line) =>{
+                    if (line === line.toUpperCase()){
+                        return line.toLowerCase();
+                    }
+                    else{
+                        return line.toUpperCase();
+                    }
+            
+                }).join(''); 
  lastly, use ',join('')' to combine all the characters to return our wanted single string.
 Then console log our function, pass in any string to output the results.
 
@@ -69,21 +71,21 @@ We'll initialize our array which will serve as the original array.
     const m = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 
 We'll then write a 'isPrime' function that checks if the number is prime,
-    function isPrime(num){
-        for(let i = 2; i < num; i++){
-            if (num % i == 0){
-                return false;
-            }  
-        }
-        return num > 1;
-    };
+            function isPrime(num){
+                for(let i = 2; i < num; i++){
+                    if (num % i == 0){
+                        return false;
+                    }  
+                }
+                return num > 1;
+            };
 
 Then use 'filter()' array method to filter and return prime numbers only from the original array.
 
     const myPrimeArray = m.filter(isPrime);
 
 We'll then check the ouput using 'console.log()'
-console.log(myPrimeArray);
+    console.log(myPrimeArray);
 
 
 Technology used: Javascript only.
